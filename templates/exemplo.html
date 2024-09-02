@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tela do Exemplo</title>
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
+	
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+</head>
+
+<body>
+	<div class="container h-100">
+		<div class="row justify-content-sm-center h-100">
+			<div class="col-xxl-6 col-xl-10 col-lg-10 col-md-8 col-sm-8">
+				<div class="card shadow-lg my-4">
+					<div class="card-body">
+						<a href="/">Voltar ao index</a>
+					</div>
+					<div class="card-body p-5">
+						<h1 class="fs-4 card-title fw-bold mb-4">Exemplo de Transcrição de Fala para texto</h1>
+						<div class="py-2">
+							<button type="button" class="btn btn-primary" onClick="startFetching()">
+								<img src="/static/images/start.png"  alt="Iniciar Transcrição" width="30" height="30"> Transcrição
+							</button>
+							<button type="button" class="btn btn-warning" onClick="stopFetching()">
+								<img src="/static/images/stop.png"  alt="Parar Transcrição" width="30" height="30"> Transcrição
+							</button>
+							<button type="button" class="btn btn-secondary" onClick="cleanText()">
+								<img src="/static/images/clean.png"  alt="Parar Transcrição" width="30" height="30">Limpar Transcrição
+							</button>
+							 
+							<button type="button" class="btn btn-success" onClick="startTranscription()">
+								<img src="/static/images/speech-icon.png"  alt="Iniciar Captura" width="30" height="30">Captura
+							</button>
+							<button type="button" class="btn btn-danger" onClick="stopTranscription()">
+								<img src="/static/images/stop-speech-icon.png"  alt="Iniciar Captura" width="30" height="30">Captura
+							</button>
+						</div>
+						<div class="mt-4">
+							<h4>Transcrição Reconhecida:</h4>
+							<div id="transcription-box" class="border p-3" style="height: 200px; overflow-y: auto;">.</div>
+						</div>
+					</div>
+				</div>
+				<div class="text-center mt-3 text-muted">
+						Exemplo de Aula - Prof. Mauricio de Oliveira Dian
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="/static/js/requests.js"></script>
+
+</body>
+</html>
